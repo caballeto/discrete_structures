@@ -11,7 +11,7 @@ struct node {
 // the products that are concurent each other are the products whcih both of the companies make
 // so the task is to find the intersection
 int main() {
-  // EX 20
+  	// EX 20
 	cout <<endl << "EX -- 20"<<endl;
 	list list1, list2;
 	int total = 20;//  total number of products
@@ -22,12 +22,12 @@ int main() {
 	list made_both; // result list
 	made_both = list1.intersection(list1.get_head(), list2.get_head()); // finding the intersection of 2 lists
   
-  // results
+  	// results
 	cout << endl <<"EX 20 result: " << endl;
 	list1.display();
 	cout << endl;
 	list2.display();
 	cout << endl;
 	made_both.display(); // made by both
-  return 0;
+  	return 0;
 }
