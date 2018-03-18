@@ -1,13 +1,12 @@
 #include <iostream>
-#include <string>
 #include <stdlib.h>
+using namespace std;
 
 struct node {
 	int data;
 	node *next;
 };
 #include "single.hpp"
-using namespace std;
 
 
 int main() {
