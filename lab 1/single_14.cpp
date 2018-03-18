@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-#include "single.hpp"
 using namespace std;
-list lot(list, int);
 
 struct node {
 	int data;
 	node *next;
 };
+#include "single.hpp"
+list lot(list, int);
 
 int main() {
    	 // EX
@@ -19,7 +19,6 @@ int main() {
 		team1.createnode(i);
 		team2.createnode(i);
 	}
-	ex14_ = team1.copy();
   
 	int n = 4;// assign n
 	int m = 5;// assign m
