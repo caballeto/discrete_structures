@@ -4,8 +4,8 @@
 using namespace std;
 
 struct node {
-	int data;
-	node *next;
+  int data;
+  node *next;
   string made_by;
 };
 #include "single.hpp"
