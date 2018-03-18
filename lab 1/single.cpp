@@ -1,3 +1,5 @@
+#include "single.hpp"
+
 int list::length() {
 	node * current = head;
 
