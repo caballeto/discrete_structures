@@ -1,3 +1,5 @@
+#include "double.hpp"
+
 double_list double_list::intersection(node *current1, node *current2) {
 	double_list intersected;
 	node *temp = new node;
