@@ -1,3 +1,10 @@
+struct node
+{
+	int data;
+	node *next;
+	node *prev;
+};
+
 class double_list
 {
 	private:
