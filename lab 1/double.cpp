@@ -1,12 +1,5 @@
 #include "double.hpp"
 
-struct node
-{
-	int data;
-	node *next;
-	node *prev;
-};
-
 double_list double_list::intersection(node *current1, node *current2) {
 	double_list intersected;
 	node *temp = new node;
