@@ -6,6 +6,21 @@ struct node {
 	node *right;
 };
 
+// condition functions
+bool condition_1(int);
+bool condition_2(int);
+bool condition_3(int);
+bool condition_4(int);
+bool condition_5(int);
+bool condition_6(int);
+bool condition_7(int);
+bool condition_8(int);
+bool condition_9(int);
+bool condition_10(int);
+bool condition_11(int);
+bool condition_12(double);
+
+// binary tree realization
 class btree {
 	public:
 	    node *root;
@@ -20,3 +35,4 @@ class btree {
 		void delete_nodes(node*, bool (*condition)(int));
 		std::vector<node*> to_vector(node*);
 };
+
