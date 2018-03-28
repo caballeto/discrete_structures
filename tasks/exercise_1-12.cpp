@@ -8,17 +8,17 @@ using namespace std;
 btree starter();
 
 int main() {
-  // initializing tree with random elementsfrom -99 to 99
+  	// initializing tree with random elementsfrom -99 to 99
 	btree tree = starter();
   
-  cout << "SEARCHING NODEs" << endl;
+  	cout << "SEARCHING NODEs" << endl;
 	vector<node*> found = tree.search_nodes(tree.root,condition_1);
-  cout << "Next nodes were found: " << endl;
+ 	cout << "Next nodes were found: " << endl;
 	for(int i = 0; i < found.size(); i++) {
-   cout << found[i] << " "; 
-  }
+   	cout << found[i] << " "; 
+  	}
   
-  cout << "DELETING NODEs" << endl;
+  	cout << "DELETING NODEs" << endl;
 	tree.delete_nodes(tree.root,condition_1);
 	tree.inorder(tree.root);
 }
