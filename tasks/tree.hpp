@@ -11,7 +11,7 @@ bool condition_1(int);
 bool condition_2(int);
 bool condition_3(int);
 bool condition_4(int);
-bool condition_5(int);
+bool condition_5(int); // EDIT!
 bool condition_6(int);
 bool condition_7(int);
 bool condition_8(int);
