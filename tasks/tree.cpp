@@ -1,10 +1,20 @@
+/*
+ * tree.cpp
+ *
+ *  Created on: Mar 22, 2018
+ *      Author: napoleon
+ */
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctime>
 #include <vector>
+#include <math.h>
 #include "tree.hpp"
 using namespace std;
+
+bool is_prime(int);
+int sum_digits(int);
 
 btree::btree() {
 	root = NULL;
@@ -140,4 +150,81 @@ void btree::delete_nodes(node *root, bool (*condition)(int)) {
 	for(unsigned int i = 0; i < found_numbers.size(); i++) {
 		delete_node(root,found_numbers[i]); // deleting nodes
 	}
+}
+
+// condition functions (exercise 1-12)
+bool condition_1(int x) {
+	int N = 10; // defining the constant
+	return ((x % N == 0) ? true : false);
+}
+bool condition_2(int x) {
+	return (((x-1)%2 == 0) ? true : false);
+}
+bool condition_3(int x) {
+	int N = 10; // defining the constant
+	return ((x > N) ? true : false);
+}
+bool condition_4(int x) {
+	int N = 10; // defining the constant
+	return ((x < N) ? true : false);
+}
+bool condition_5(int x) {
+	bool res;
+	cout << x << " " << "Delete?(true/false)";
+	while(res != true || res != false) {
+		cin >> res;
+		if(res != true || res != false)
+			cout << "Invalid input. try again." << endl;
+	}
+	return res;
+}
+bool condition_6(int x) {
+	return is_prime(x);
+}
+bool condition_7(int x) {
+	return !is_prime(x);
+}
+bool condition_8(int x) {
+	int X = 10, Y = 25; // defining the constant
+	return ((x > X && x < Y) ? true : false);
+}
+bool condition_9(int x) {
+	int N = 10; // defining the constant
+	return ((sum_digits(x) > N) ? true : false);
+}
+
+bool condition_10(int x) {
+	int N = 10; // defining the constant
+	return ((sum_digits(x) < N) ? true : false);
+}
+
+bool condition_11(int x) {
+	int X = 10, Y = 25, sum = sum_digits(x); // defining the constant
+	return ((sum > X && sum < Y) ? true : false);
+}
+
+bool condition_12(double x) {
+	double b;
+	return (modf(sqrt(x),&b) == 0 ? true : false);
+}
+
+// help functions for conditions
+bool is_prime(int x) {
+    if(x == 2) return true;
+	for(int i = 2; i <= floor(sqrt(x)); i++) {
+		if(x % i == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+
+int sum_digits(int x){
+	int sum = 0,add;
+	while(x > 0) {
+	    add = x%10;
+	    x /= 10;
+		sum += add;
+	}
+	return sum;
 }
