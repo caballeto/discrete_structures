@@ -7,7 +7,7 @@ struct node {
 
 class btree {
 	public:
-	    node *root;
+		node *root;
 		btree();
 		node* insert(int, node*);
 		void inorder(node*);
